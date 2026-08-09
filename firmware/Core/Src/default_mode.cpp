@@ -208,7 +208,7 @@ void Mode::check_current_limits(void){
     }
 
     // fault if imbalance is too high
-    if(error_on_current_imbalance && abs(U_ma + V_ma + W_ma) > MAX_IMBALANCE_CURRENT){
+    if(abs(U_ma + V_ma + W_ma) > MAX_IMBALANCE_CURRENT){
         logs->add((uint32_t)current_sense_messages::imbalance);
     }
 }

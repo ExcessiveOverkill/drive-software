@@ -128,7 +128,7 @@ void chainload(uint32_t offset) {
     while (true);   // should never reach here
 }
 
-int main(void) {
+ int main(void) {
     // Jump to application if there's no new image.
     if (image_header[0] == 0xffffffff) {
         chainload(application_addr);
